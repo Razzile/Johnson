@@ -4,6 +4,7 @@
   "description": "a bot for halo mcc",
   "main": "dist/main.js",
   "scripts": {
+    "bot": "dist/bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
