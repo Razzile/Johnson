@@ -75,10 +75,12 @@ export default class StatsCommand extends Command {
     embed.addField('Last 20 games', `${winCount} Wins, ${lossCount} Losses`);
     embed.addField('Current Streak', profile.streak);
 
-    embed.setAuthor(
-        `${profile.gamertag} [${profile.clantag}]`, undefined,
+    const profileUrl = encodeURI(
         `https://www.halowaypoint.com/en-us/games/halo-the-master-chief-collection/xbox-one/service-records/players/${
             profile.gamertag}`);
+    embed.setAuthor(
+        `${profile.gamertag} [${profile.clantag}]`, undefined, profileUrl);
+
     return embed;
   }
 }
