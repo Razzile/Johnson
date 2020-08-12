@@ -54,7 +54,7 @@ class JohnsonBot {
 
   private loadCommands() {
     // read each file and require() it.
-    const commandDir: string = path.join(__dirname, 'Commands');
+    const commandDir: string = path.join(__dirname, 'commands');
     console.log(`Loading commands from ${commandDir}`);
     fs.readdirSync(commandDir).forEach((file) => {
       if (file.endsWith('.js')) {
